@@ -12,15 +12,11 @@ export class LoginComponent implements OnInit {
 
   public usuario: LoginUser = new LoginUser();
 
-  private key = localStorage.getItem('key')
-
   constructor(private authService: AuthService, private router: Router ) { }
 
   ngOnInit(): void {
-    if (this.key) {
-      this.router.navigate(['/characters/0']);
-    } else {
-      this.router.navigate(['/']);
+    if (this.authService.userGetAuth()) {
+      this.router.navigate(['/characters/0'])
     }
   }
 

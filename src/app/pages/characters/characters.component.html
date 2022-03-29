@@ -16,6 +16,9 @@
         <a *ngIf="totalPages>num+1" [routerLink]="'/characters/'+pages[1]">Next</a>
     </div>
     <div class="cards">
+        <div *ngIf="!characters[0]" class="not-found">
+            <h1>Character not found!</h1>
+        </div>
         <ng-template ngFor let-character [ngForOf]="characters">
             <a class="card" [routerLink]="'/character/'+character.id">
                 <figure>

@@ -1,3 +1,4 @@
+<div *ngIf="!character" class="not-found"><h1>Page not found!</h1></div>
 <div *ngIf="character" class="character">
     <figure>
         <img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" alt="">

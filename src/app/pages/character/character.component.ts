@@ -11,8 +11,6 @@ import { Router } from '@angular/router';
 })
 export class CharacterComponent implements OnInit {
 
-  private key = localStorage.getItem('key')
-
   public userId!: string;
 
   public character!:Character;
@@ -24,15 +22,11 @@ export class CharacterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.key) {
-      this.characterService.getCharactersById(this.userId).subscribe(
-        res => {
-          this.character = res.data.results[0];
-        }
-      )
-    } else {
-      this.Router.navigate(['/'])
-    }
+    this.characterService.getCharactersById(this.userId).subscribe(
+      res => {
+        this.character = res.data.results[0];
+      }
+    )
   }
 
 }
