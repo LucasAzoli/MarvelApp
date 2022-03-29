@@ -15,40 +15,31 @@ export class CharactersComponent implements OnInit {
   public characters: any
   public totalPages: number = 0
   public pages: string[] = ['-1','1']
-
-  private key = localStorage.getItem('key')
+  
   public num:number = 0
 
   constructor( private characterService: ApiService, private Router: Router, private router:ActivatedRoute ) {
     router.params.subscribe((params) => {
       if (params["num"]) {
         this.num = Number(params["num"])
-        if (this.key) {
-          this.characterService.getCharacters(this.num*60).subscribe(
-            res => {
-              this.characters = res.data.results
-              this.totalPages = res.data.total/60
-            }
-          )
-        } else {
-          this.Router.navigate(['/'])
-        }
+        this.characterService.getCharacters(this.num*60).subscribe(
+          res => {
+            this.characters = res.data.results
+            this.totalPages = res.data.total/60
+          }
+        )
       }
       this.pages = [(this.num-1).toString(), (this.num+1).toString()]
     });
   }
 
   ngOnInit(): void {
-    if (this.key) {
-      this.characterService.getCharacters(this.num*60).subscribe(
-        res => {
-          this.characters = res.data.results
-          this.totalPages = res.data.total/60
-        }
-      )
-    } else {
-      this.Router.navigate(['/'])
-    }
+    this.characterService.getCharacters(this.num*60).subscribe(
+      res => {
+        this.characters = res.data.results
+        this.totalPages = res.data.total/60
+      }
+    )
   }
 
   search() {
