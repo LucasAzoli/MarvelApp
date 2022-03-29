@@ -1,0 +1,142 @@
+$red: #EC1D24
+$white: #FEFEFE
+$grey: #5C5C5C
+$dark-grey: #202020
+
+.loading
+    display: flex
+    justify-content: center
+    width: 100vw
+    height: 100vh
+    p
+        margin: auto
+
+.section
+    width: 85vw
+    margin: 40px auto
+    max-width: 1200px
+
+    @media screen and (max-width: 650px)
+        width: 95vw
+
+    .title
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @media screen and (max-width: 650px)
+            flex-direction: column
+            gap: 5px
+
+            h1
+                font-size: 2rem
+
+        form
+            display: flex
+            gap: 5px
+            align-items: center
+            padding: 5px 10px
+            border: 2px solid $grey
+
+            &:focus-within
+                border: 2px solid $red
+
+            input
+                width: 150px
+                border: none
+                font-size: 1.6rem
+
+                &:focus
+                    outline: none
+
+        button
+            border: none
+            background-color: transparent
+            cursor: pointer
+            img
+                width: 20px
+
+    .cards
+        margin: 10px 0
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+
+        @media screen and (max-width: 650px)
+            justify-content: center
+
+    .pagination
+        width: 85vw
+        display: flex
+        justify-content: space-between
+        margin: 10px auto
+
+        a
+            font-size: 1.6rem
+            font-weight: 700
+            cursor: pointer
+            background-color: $red
+            padding: 10px
+            width: 100px
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)
+            color: $white
+            text-align: center
+
+            &:hover
+                opacity: 0.85
+
+.card
+    width: calc( (100% - 50px)/6 )
+    height: 350px
+    background-color: $dark-grey
+    border-top: 5px solid $red
+    color: $white
+    cursor: pointer
+    clip-path: polygon(10% 0, 100% 0, 100% 95%, 90% 100%, 0 100%, 0 5%)
+    max-width: 210px
+    min-width: 170px
+    transition-property: background-color, bottom, top, height
+    transition: background-color 0.5s
+
+    @media screen and (max-width: 1300px)
+        width: calc( (100% - 50px)/5 )
+
+    @media screen and (max-width: 1080px)
+        width: calc( (100% - 40px)/4 )
+
+    @media screen and (max-width: 850px)
+        width: calc( (100% - 30px)/3 )
+
+    @media screen and (max-width: 650px)
+        width: calc( (100% - 20px)/2 )
+
+    @media screen and (max-width: 375px)
+        width: calc( 100% )
+        height: 350px
+
+    &:hover
+        figure img
+            transform: scale(1.3)
+
+    figure
+        overflow: hidden
+        height: 50%
+
+        img
+            width: 100%
+            min-height: 100%
+            transition: transform .2s
+
+    .info
+        height: 50%
+        padding: 10px 20px 20px 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        h3
+            color: #bbb
+    
+    &:hover
+        transiction
+        background-color: $red

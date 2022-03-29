@@ -1,0 +1,22 @@
+<div *ngIf="character" class="character">
+    <figure>
+        <img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" alt="">
+    </figure>
+    <div class="info">
+        <h1>{{ character?.name }}</h1>
+        <div>
+            <div>
+                <h2>Comics</h2>
+                <ng-template ngFor let-comic [ngForOf]="character.comics.items">
+                    <p>{{ comic.name }}</p>
+                </ng-template>
+            </div>
+            <div>
+                <h2>Series</h2>
+                <ng-template ngFor let-serie [ngForOf]="character.series.items">
+                    <p>{{ serie.name }}</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

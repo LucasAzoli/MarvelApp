@@ -1,0 +1,68 @@
+$red: #EC1D24
+$white: #FEFEFE
+$grey: #5C5C5C
+$dark-grey: #202020
+
+.login
+    background-color: $dark-grey
+    display: flex
+    height: 100vh
+
+    .poster
+        width: 50vw
+        max-height: 100vh
+        overflow: hidden
+
+        @media screen and (max-width: 1200px)
+            display: none
+        
+        img
+            width: 50vw
+            height: 100vh
+            transform: scale(1.1)
+            display: block
+
+    form
+        display: flex
+        flex-direction: column
+        margin: 50px auto
+        justify-content: space-between
+        max-height: 800px
+
+        div
+            display: flex
+            flex-direction: column
+            gap: 15px
+
+            label
+                font-size: 2rem
+                color: $white
+
+            input
+                all: unset
+                padding: 10px 20px
+                background-color: $white
+                font-size: 2rem
+                clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 20%)
+                border: 2px solid $dark-grey
+
+                &:focus
+                    outline: none
+                    border: 2px solid $red
+
+
+
+        button
+            font-size: 2.8rem
+            background-color: $red
+            border: none
+            padding: 10px 20px
+            clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 20%)
+            color: $white
+            cursor: pointer
+
+            &:hover
+                opacity: 0.8
+
+        
+            

@@ -1,0 +1,17 @@
+<div class="login">
+    <figure class="poster">
+        <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg" alt="">
+    </figure>
+    <form action="">
+        <figure>
+            <img src="/assets/images/logo.png" alt="">
+        </figure>
+        <div>
+            <label for="email">Email</label>
+            <input [(ngModel)]="usuario.email" id="email" type="email" placeholder="example@marvel.com" [ngModelOptions]="{standalone: true}" required>
+            <label for="password">Senha</label>
+            <input [(ngModel)]="usuario.password" id="password" type="password" placeholder="Digite sua senha" [ngModelOptions]="{standalone: true}" required>
+        </div>
+        <button type="submit" (click)="login()">LOGIN</button>
+    </form>
+</div>

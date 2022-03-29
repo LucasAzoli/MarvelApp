@@ -1,0 +1,49 @@
+$red: #EC1D24
+$white: #FEFEFE
+$grey: #5C5C5C
+$dark-grey: #202020
+
+.character
+    margin: 0
+    background-color: $dark-grey
+    display: flex
+
+    .info
+        display:flex
+        justify-content: center
+        width: 50vw
+        color: $white
+
+        div
+            margin: 25px 50px
+
+            h2
+                margin-bottom: 20px
+
+        h1
+            text-align: center
+            padding: 10px
+            margin: 15px auto
+            background-color: $red
+            width: 60%
+            clip-path: polygon(5% 0, 100% 0, 100% 70%, 95% 100%, 0 100%, 0 30%)
+
+    img
+        width: 50vw
+        height: 100vh
+
+    @media screen and (max-width: 1080px)
+        flex-direction: column
+        height: auto
+
+        padding-bottom: 30px
+
+        img
+            width: 100vw
+            height: auto
+
+        .info
+            width: 100vw
+
+            div
+                margin: 12px 25px
