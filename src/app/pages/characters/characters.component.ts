@@ -15,7 +15,7 @@ export class CharactersComponent implements OnInit {
   public characters: any
   public totalPages: number = 0
   public pages: string[] = ['-1','1']
-  
+
   public num:number = 0
 
   constructor( private characterService: ApiService, private Router: Router, private router:ActivatedRoute ) {
@@ -46,6 +46,7 @@ export class CharactersComponent implements OnInit {
     this.characterService.getCharactersByName(this.name).subscribe(
       res => {
         this.characters = res.data.results;
+        console.log(this.characters)
         this.totalPages = res.data.total/60
       }
     )
