@@ -75,7 +75,7 @@ export class AuthService {
           localStorage.setItem('name', res[0].name)
           this.router.navigate(['/characters/0'])
         } else {
-          window.alert('Email e/ou senha incorretos!')
+          window.alert('Email e/ou senha incorretos!!')
         }
       })
     )
