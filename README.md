@@ -1,27 +1,19 @@
-# MarvelApp
+<h1 align="center">MarvelApp</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+<p align="center">MarvelApp é um site criado usando a API da Marvel.</p>
 
-## Development server
+![image](https://user-images.githubusercontent.com/77306471/173594294-379d041a-e199-4a0e-a8cc-3b087ce98327.png)
+![image](https://user-images.githubusercontent.com/77306471/173598189-cdf8b9ad-4065-4af3-8684-cf259fb38b5b.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h2>Sobre</h2>
+<p>O site foi desenvolvido utilizando <b>HTML</b>, <b>SASS</b>, <b>TypeScript</b> e <b>JavaScript</b> e tem layout responsivo e bem intuitivo, sendo sua principal função listar personagens ligados ao mundo Marvel, além disso o site conta com um sistema de login utilizando JSON Server.</p>
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h2>Instalação</h2>
+<p>Para testar o projeto temos que primeiro baixar as dependências utilizando o comando abaixo:</p>
+<pre><code>npm install</code></pre>
+<p>Agora podemos rodar o projeto com o seguinte comando:</p>
+<pre><code>ng serve</code></pre>
+<p>E por fim, falta só usar o JSON Server para emular o back-end, ligamos ele pelo seguinte codigo em outro terminal:</p>
+<pre><code>json-server --watch db.json</code></pre>
+<p>Os logins registrados podem ser encontrados no arquivo JSON <code>path/db.json</code></p>
+<p>Para que o projeto funcione, também é preciso que você tenha uma conta na API da Marvel e que coloque sua chave privada no campo key do arquivo JSON</p>
