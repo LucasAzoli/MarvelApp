@@ -5,21 +5,21 @@
             "email": "lucasazevedo@marvel.com",
             "password": "azevedolucas",
             "name": "Lucas",
-            "key": "23d35113d155c2d869925d555208e600bf9525d5"
+            "key": ""
         },
         {
             "id": "1590",
             "email": "josepereira@marvel.com",
             "password": "pereirajose",
             "name": "José",
-            "key": "23d35113d155c2d869925d555208e600bf9525d5"
+            "key": ""
         },
         {
             "id": "9182",
             "email": "joaocarlos@marvel.com",
             "password": "carlosjoao",
             "name": "João",
-            "key": "23d35113d155c2d869925d555208e600bf9525d5"
+            "key": ""
         }
     ]
 }
